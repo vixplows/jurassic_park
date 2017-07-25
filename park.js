@@ -19,3 +19,16 @@ Park.prototype.removeDinoByType = function(type) {
     };
   };
 };
+
+Park.prototype.getDinoByBabiesCount = function(number) {
+  var dinosByBabies = [];
+
+  for(var i = 0; i < this.enclosure.length; i++) {
+    var dinosaur = this.enclosure[i];
+
+    if(dinosaur.yearlyOffspring > number) {
+      dinosByBabies.push(dinosaur.type);
+    };
+  };
+  return dinosByBabies.toString();
+};

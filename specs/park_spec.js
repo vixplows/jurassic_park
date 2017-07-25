@@ -23,7 +23,7 @@ describe("Park", function() {
   it("should be able to add a dinosaur", function() {
     park.addDinosaur(dino1);
     assert.strictEqual(park.enclosure.length, 1);
-  })
+  });
 
   it("should be able to remove dinosaur by type", function() {
     park.addDinosaur(dino1);
@@ -33,6 +33,25 @@ describe("Park", function() {
     park.addDinosaur(dino5);
     park.removeDinoByType(dino1.type);
     assert.strictEqual(park.enclosure.length, 3)
-  })
+  });
+
+  it("should get dinosaurs by offspring count more than two", function() {
+    park.addDinosaur(dino1);
+    park.addDinosaur(dino2);
+    park.addDinosaur(dino3);
+    park.addDinosaur(dino4);
+    park.addDinosaur(dino5);
+    assert.strictEqual(park.getDinoByBabiesCount(2), "Stegosaurus");
+  });
+
+  it("should get dinosaurs by offspring count more than one", function() {
+    park.addDinosaur(dino1);
+    park.addDinosaur(dino2);
+    park.addDinosaur(dino3);
+    park.addDinosaur(dino4);
+    park.addDinosaur(dino5);
+    assert.strictEqual(park.getDinoByBabiesCount(1), "Allosaurus,Stegosaurus,T-Rex");
+  });
+
 
 });
