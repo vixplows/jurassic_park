@@ -37,7 +37,6 @@ Park.prototype.doNotPanicItsUnix = function() {
   return "It's a unix system, I know this!"
 }
 
-// wrong calcuation, logic error
 Park.prototype.futureDinoNumbersOneDinoStart = function(dinosaur, years) {
 
   if (years === 1) {
