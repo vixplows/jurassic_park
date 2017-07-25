@@ -36,3 +36,7 @@ Park.prototype.getDinoByBabiesCount = function(number) {
 Park.prototype.doNotPanicItsUnix = function() {
   return "It's a unix system, I know this!"
 }
+
+Park.prototype.futureDinoNumbersOneDinoOneYear = function(dinosaur) {
+  return 1 + dinosaur.yearlyOffspring;
+}

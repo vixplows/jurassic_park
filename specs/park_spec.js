@@ -53,13 +53,12 @@ describe("Park", function() {
     assert.strictEqual(park.getDinoByBabiesCount(1), "Iguanadon,Stegosaurus,T-Rex");
   });
 
-  // it("should caluculate number of dinosaurs after year one, starting with 1 dinosaur", function() {
-  //   park.addDinosaur(dino1);
-  //   assert.strictEqual(park.futureDinoNumbers(), 2)
-  // })
-
   it("should return I know unix when teenagers arrive", function() {
     assert.strictEqual(park.doNotPanicItsUnix(), "It's a unix system, I know this!")
+  })
+
+  it("should caluculate number of dinosaurs after year one, starting with 1 dinosaur", function() {
+    assert.strictEqual(park.futureDinoNumbersOneDinoOneYear(dino1), 2)
   })
 
 });
