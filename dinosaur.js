@@ -5,5 +5,3 @@ var Dinosaur = function(type, yearlyOffspring) {
 
 module.exports = Dinosaur;
 
-
-
