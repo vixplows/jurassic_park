@@ -58,11 +58,17 @@ describe("Park", function() {
   })
 
   it("should caluculate number of dinosaurs after year one, starting with 1 dinosaur", function() {
-    assert.strictEqual(park.futureDinoNumbersOneDinoStart(dino2, 1), 3)
+    assert.strictEqual(park.futureDinoNumbersOneDinoStart(dino2, 1), 3);
   })
 
   it("should caluculate number of dinosaurs after two years, starting with 1 dinosaur", function() {
-    assert.strictEqual(park.futureDinoNumbersOneDinoStart(dino1, 2), 4)
+    assert.strictEqual(park.futureDinoNumbersOneDinoStart(dino1, 2), 4);
+    assert.strictEqual(park.futureDinoNumbersOneDinoStart(dino2, 2), 9);
+    assert.strictEqual(park.futureDinoNumbersOneDinoStart(dino3, 2), 16);
   })
+
+  // it("should caluculate number of dinosaurs after two years, starting with 2 dinosaurs", function() {
+  //   assert.strictEqual(park.futureDinoNumbersTwoDinoStart(dino1, dino2, 2), 16)
+  // })
 
 });

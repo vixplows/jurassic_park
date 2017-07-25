@@ -37,10 +37,22 @@ Park.prototype.doNotPanicItsUnix = function() {
   return "It's a unix system, I know this!"
 }
 
-Park.prototype.futureDinoNumbersOneDinoOneYear = function(dinosaur) {
-  return 1 + dinosaur.yearlyOffspring;
+// wrong calcuation, logic error
+Park.prototype.futureDinoNumbersOneDinoStart = function(dinosaur, years) {
+
+  if (years === 1) {
+    return 1 + dinosaur.yearlyOffspring;
+  }
+  if (years === 2) {
+    var yearOneTotal = 1 + dinosaur.yearlyOffspring;
+    var yearTwoTotal = (yearOneTotal * dinosaur.yearlyOffspring) + yearOneTotal;
+    return yearTwoTotal
+  }
 }
 
-Park.prototype.futureDinoNumbersOneDinoStart = function(dinosaur, year) {
-  return (1 + dinosaur.yearlyOffspring) * year;
-}
+// logic error
+// Park.prototype.futureDinoNumbersTwoDinoStart = function(dinosaur1, dinosaur2, year) {
+//   var futureDinoNumbers = ((1 + dinosaur1.yearlyOffspring) * year) + ((1 + dinosaur2.yearlyOffspring) * year);
+
+//   return futureDinoNumbers;
+// }
