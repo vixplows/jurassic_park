@@ -67,8 +67,8 @@ describe("Park", function() {
     assert.strictEqual(park.futureDinoNumbersOneDinoStart(dino3, 2), 16);
   })
 
-  // it("should caluculate number of dinosaurs after two years, starting with 2 dinosaurs", function() {
-  //   assert.strictEqual(park.futureDinoNumbersTwoDinoStart(dino1, dino2, 2), 16)
-  // })
+  it("should caluculate number of dinosaurs after two years, starting with 2 dinosaurs", function() {
+    assert.strictEqual(park.dinoNumbersTwoDinoStartAtTwoYears(dino1, dino2), 13);
+  })
 
 });

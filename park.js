@@ -42,17 +42,22 @@ Park.prototype.futureDinoNumbersOneDinoStart = function(dinosaur, years) {
 
   if (years === 1) {
     return 1 + dinosaur.yearlyOffspring;
-  }
+  };
   if (years === 2) {
     var yearOneTotal = 1 + dinosaur.yearlyOffspring;
     var yearTwoTotal = (yearOneTotal * dinosaur.yearlyOffspring) + yearOneTotal;
     return yearTwoTotal
+  };
+};
+
+Park.prototype.dinoNumbersTwoDinoStartAtTwoYears = function(dinosaur1, dinosaur2) {
+  var dinosaurs = [dinosaur1, dinosaur2];
+  var dinoCounter = 0
+
+  for (dinosaur of dinosaurs) {
+    var yearOneTotal = 1 + dinosaur.yearlyOffspring;
+    var yearTwoTotal = (yearOneTotal * dinosaur.yearlyOffspring) + yearOneTotal;
+    dinoCounter += yearTwoTotal;
   }
+  return dinoCounter;
 }
-
-// logic error
-// Park.prototype.futureDinoNumbersTwoDinoStart = function(dinosaur1, dinosaur2, year) {
-//   var futureDinoNumbers = ((1 + dinosaur1.yearlyOffspring) * year) + ((1 + dinosaur2.yearlyOffspring) * year);
-
-//   return futureDinoNumbers;
-// }
