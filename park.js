@@ -32,3 +32,7 @@ Park.prototype.getDinoByBabiesCount = function(number) {
   };
   return dinosByBabies.toString();
 };
+
+Park.prototype.doNotPanicItsUnix = function() {
+  return "It's a unix system, I know this!"
+}
