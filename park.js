@@ -40,3 +40,7 @@ Park.prototype.doNotPanicItsUnix = function() {
 Park.prototype.futureDinoNumbersOneDinoOneYear = function(dinosaur) {
   return 1 + dinosaur.yearlyOffspring;
 }
+
+Park.prototype.futureDinoNumbersOneDinoStart = function(dinosaur, year) {
+  return (1 + dinosaur.yearlyOffspring) * year;
+}
