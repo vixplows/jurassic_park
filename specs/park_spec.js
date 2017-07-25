@@ -50,7 +50,7 @@ describe("Park", function() {
     park.addDinosaur(dino3);
     park.addDinosaur(dino4);
     park.addDinosaur(dino5);
-    assert.strictEqual(park.getDinoByBabiesCount(1), "Allosaurus,Stegosaurus,T-Rex");
+    assert.strictEqual(park.getDinoByBabiesCount(1), "Iguanadon,Stegosaurus,T-Rex");
   });
 
 
