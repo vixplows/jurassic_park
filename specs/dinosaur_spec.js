@@ -16,7 +16,7 @@ describe("Dinosaur", function() {
   });
 
   it("should have a yearly offspring number", function() {
-    assert.strictEqual(dino2.yearlyOffspring, 2);
+    assert.strictEqual(dino1.yearlyOffspring, 1);
   });
 
 });

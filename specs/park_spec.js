@@ -2,14 +2,21 @@ var assert = require('assert');
 var Dinosaur = require('../dinosaur.js');
 var Park = require('../park.js');
 
-describe("Park", function(){
+describe("Park", function() {
 
   var dinosaur;
   var park;
 
-  beforeEach(function(){
-    dinosaur = new Dinosaur();
+  beforeEach(function() {
+    dino1 = new Dinosaur("Allosaurus", 1);
+    dino2 = new Dinosaur("Iguanadon", 2);
+    dino3 = new Dinosaur("Stegosaurus", 3);
+    dino4 = new Dinosaur("Allosaurus", 1);
     park = new Park();
+  });
+
+  it("should start with an empty enclosure", function() {
+    assert.strictEqual(park.enclosure.length, 0)
   });
 
 });
